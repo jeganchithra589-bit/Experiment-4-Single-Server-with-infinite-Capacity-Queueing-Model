@@ -1,4 +1,4 @@
-# Experiment-4-Single-Server-with-infinite-Capacity-Queueing-Model
+<img width="1920" height="1080" alt="Screenshot (189)" src="https://github.com/user-attachments/assets/e5227f91-8f5a-4162-9cd7-fd1017400eec" /># Experiment-4-Single-Server-with-infinite-Capacity-Queueing-Model
 # Aim
 To find
 
@@ -24,48 +24,35 @@ If the arrival of materials follow poisson process with mean interval time 12 se
 <img width="847" height="255" alt="image" src="https://github.com/user-attachments/assets/f5b78f76-ddef-4bcd-afee-044fb0babdc8" />
 
 # Program
-```import math 
- 
-arr_time_input = '' 
-while not arr_time_input.strip(): # Loop until a non-empty input is received 
-    arr_time_input = input("Enter the mean inter arrival time of objects from feeder (in secs):") 
-    if not arr_time_input.strip(): 
-        print("Input cannot be empty. Please enter a value.") 
- 
-arr_time = float(arr_time_input) 
- 
-ser_time=float(input("Enter the mean inter service time of lathe machine (in secs):")) 
-Robot_time=float(input("Enter the Additional time taken for the robot (in secs):")) 
-c=int(input("Number of service centres:")) 
+```
+arr_time=float(input("Enter the mean inter arrival time of objects from Feeder (in secs)")) 
+ser_time=float(input("Enter the mean inter servie time of Lathe Machine (in secs):")) 
+Robot_time=float(input("Enter the Additional time taken for the Robot (in secs):")) 
 lam=1/arr_time 
 mu=1/(ser_time+Robot_time) 
-print("------------------------------------------------") 
-print("Multiple Server with infinite capacity- (M/M/c):(00/FIFO)") 
-print("----------------------------------------------------") 
-print("The mean arrival rate per second: %0.2f" %lam) 
-print("The mean service rate per second: %0.2f"%mu) 
-rho=lam/(c*mu) 
-sum=(lam/mu)**c*(1/(1-rho))/math.factorial(c) 
-for i in range(0,c): 
-    sum=sum+(lam/mu)**i/math.factorial(i) 
-P0=1/sum 
-if(c<5): 
-    Lq=(P0/math.factorial(c))*(1/c)*(lam/mu)**(c+1)/(1-rho)**2 
-    Ls=Lq+lam/mu 
+print("----------------------------------------") 
+print("Single Server with Infinite Capacity-(M/M/1):(00/FIFO)") 
+print("----------------------------------------") 
+print("The mean arrival rate per second: %0.2f "%lam) 
+print("The mean service rate per second: %0.2f "%mu) 
+if(Robot_time<8): 
+    Ls=lam/(mu-lam) 
+    Lq=Ls-lam/mu 
     Ws=Ls/lam 
     Wq=Lq/lam 
     print("Average number of objects in the system: %0.2f"%Ls) 
-    print("Average numner of objects in the conveyor: %0.2f"%Lq) 
-    print("Average waiting time of an object in the system: %0.2f secs"%Ws) 
-    print("Average waiting time of an object in the conveyor: %0.2f secs"%Ws) 
-    print("Probability that the system is busy: %0.2f" %(rho)) 
-    print("Probability that the system is empty:%0.2f "%(1-rho)) 
+    print("Average number of objects in the conveyer: %0.2f"%Lq) 
+    print("Average time spent by an object in the system: %0.2f"%Ws) 
+    print("Average time spent by an object in the conveyer: %0.2f"%Wq) 
+    print("Probability that the system is busy: %0.2f "%(lam/mu)) 
+    print("Probability that the system is empty: %0.2f "%(1-lam/mu)) 
 else: 
-    print("Warning! Objects overflow will happen in the conveyor") 
-print("-----------------------------------------------------") 
+    print("Warning! Objects overflow will happen in the conveyer") 
+print("----------------------------------------")
+
 ```
 # Output
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47c9ac7f-15cc-4023-a358-a45babca3504" />
+<img width="1920" height="1080" alt="Screenshot (189)" src="https://github.com/user-attachments/assets/d49f53ae-3c05-4bef-ad55-bbe4e784e73f" />
 
 # Result
        The average number of material in the system and in the conveyor and waiting time are successfully found.
