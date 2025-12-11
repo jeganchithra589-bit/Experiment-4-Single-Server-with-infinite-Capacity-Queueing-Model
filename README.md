@@ -22,9 +22,9 @@ If the arrival of materials follow poisson process with mean interval time 12 se
 5.	 Despite its simplicity, the model serves as a foundational benchmark for analysing more intricate queueing systems and real-world service operations.
 # Procedure: 
 <img width="847" height="255" alt="image" src="https://github.com/user-attachments/assets/f5b78f76-ddef-4bcd-afee-044fb0babdc8" />
-#Name:Jegan P
-#Ref No:25017588
-#colab link:
+# Name:Jegan P
+# Ref No:25017588
+# colab link:
 https://colab.research.google.com/drive/1x8Vh7_XzTXvVkE27G4Fqj0VUKvquheb1#scrollTo=OkjMJk8nFDUC&line=1&uniqifier=1
 
 # Program
