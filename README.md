@@ -24,7 +24,7 @@ If the arrival of materials follow poisson process with mean interval time 12 se
 <img width="847" height="255" alt="image" src="https://github.com/user-attachments/assets/f5b78f76-ddef-4bcd-afee-044fb0babdc8" />
 
 # Program
-import math 
+```import math 
  
 arr_time_input = '' 
 while not arr_time_input.strip(): # Loop until a non-empty input is received 
@@ -63,7 +63,7 @@ if(c<5):
 else: 
     print("Warning! Objects overflow will happen in the conveyor") 
 print("-----------------------------------------------------") 
-
+```
 # Output
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47c9ac7f-15cc-4023-a358-a45babca3504" />
 
