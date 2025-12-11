@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="Screenshot (189)" src="https://github.com/user-attachments/assets/e5227f91-8f5a-4162-9cd7-fd1017400eec" /># Experiment-4-Single-Server-with-infinite-Capacity-Queueing-Model
+# Experiment-4-Single-Server-with-infinite-Capacity-Queueing-Model
 # Aim
 To find
 
